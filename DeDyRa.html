@@ -1,53 +1,168 @@
-
-
-<html>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>DeDyRa</title>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeDyRa</title>
+
+  <style>
+    body {
+      margin: 16px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      text-decoration: underline;
+    }
+
+    .table-wrapper {
+      max-width: 1100px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 700px;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+
+    .date-column { width: 8%; }
+    .speaker-column { width: 18%; }
+    .affiliation-column { width: 22%; }
+    .title-column { width: 52%; }
+
+    th, td {
+      padding: 7px;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+
+    th:first-child, td:first-child {
+      white-space: nowrap;
+    }
+
+    .abstract {
+      max-width: 65ch;
+      margin: 0.5em 0 0;
+      line-height: 1.5;
+      text-align: left;
+    }
+  </style>
+
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
 </head>
 
-
-
 <body>
-<p><u><font size="6"><b>DeDyRa</b> (Definability, Dynamics and Randomness) seminar</font></u></p>
+  <h1><strong>DeDyRa</strong> (Definability, Dynamics and Randomness) seminar</h1>
 
-<p><b>Organizers: <a href="https://users.math.cas.cz/~doucha/index.html">Michal Doucha</a> and <a href="https://grebikj.github.io/">Jan Grebík</a></b></p>
+  <p><strong>Organizers:
+    <a href="https://users.math.cas.cz/~doucha/index.html">Michal Doucha</a>
+    and <a href="https://grebikj.github.io/">Jan Grebík</a>
+  </strong></p>
 
-<p><b>Fridays from 11:00 to 12:00 in room S8 at Malá Strana</b></p>
+  <p><strong>Fridays from 11:00 to 12:00 in room S8 at Malá Strana</strong></p>
 
-<table cellpadding="7" cellspacing="0"> <tr> <th align="left">Date</th> <th align="left">Speaker</th> <th align="left">Affiliation</th> <th align="left">Title</th> </tr>
+  <div class="table-wrapper" role="region" aria-label="Seminar schedule" tabindex="0">
+    <table>
+      <colgroup>
+        <col class="date-column">
+        <col class="speaker-column">
+        <col class="affiliation-column">
+        <col class="title-column">
+      </colgroup>
 
-<tr> <td>6. 11.</td> <td><a href="https://andreasthom.github.io/">Andreas Thom</a></td> <td>TU Dresden</td> <td> TBA <details> <summary>Abstract</summary> <p>TBA</p> </details> </td> </tr>
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Speaker</th>
+          <th scope="col">Affiliation</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
 
-<tr> <td>13. 11.</td> <td><a href="https://sites.google.com/view/franco-severo">Franco Severo</a></td> <td>Sorbonne Université</td> <td> TBA <details> <summary>Abstract</summary> <p>TBA</p> </details> </td> </tr>
+      <tbody>
+        <tr>
+          <td>6. 11.</td>
+          <td><a href="https://andreasthom.github.io/">Andreas Thom</a></td>
+          <td>TU Dresden</td>
+          <td>
+            <em><strong>Approximation properties of groups</strong></em>
+            <p class="abstract"><strong>Abstract:</strong> I want to report on the recent developments that led to the construction of a non-sofic group. This is based on results of OpenAI and joint work with Gabor Kun.</p>
+          </td>
+        </tr>
 
-<tr> <td>20. 11.</td> <td><a href="https://www.matthiasirlbeck.com/">Matthias Irlbeck</a></td> <td>University of Hamburg</td> <td> TBA <details> <summary>Abstract</summary> <p>TBA</p> </details> </td> </tr>
+        <tr>
+          <td>13. 11.</td>
+          <td><a href="https://sites.google.com/view/franco-severo">Franco Severo</a></td>
+          <td>Sorbonne Université</td>
+          <td>
+            TBA
+            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+          </td>
+        </tr>
 
-<tr> <td>27. 11.</td> <td><a href="https://sites.google.com/view/razslutskymath/">Raz Slutsky</a></td> <td>University of Oxford</td> <td> TBA <details> <summary>Abstract</summary> <p>TBA</p> </details> </td> </tr>
+        <tr>
+          <td>20. 11.</td>
+          <td><a href="https://www.matthiasirlbeck.com/">Matthias Irlbeck</a></td>
+          <td>University of Hamburg</td>
+          <td>
+            TBA
+            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+          </td>
+        </tr>
 
-<tr> <td>4. 12.</td> <td><a href="https://sites.google.com/view/matt-bowen/home">Matt Bowen</a></td> <td>Warwick University</td> <td> TBA <details> <summary>Abstract</summary> <p>TBA</p> </details> </td> </tr>
+        <tr>
+          <td>27. 11.</td>
+          <td><a href="https://sites.google.com/view/razslutskymath/">Raz Slutsky</a></td>
+          <td>University of Oxford</td>
+          <td>
+            TBA
+            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+          </td>
+        </tr>
 
-<tr> <td>11. 12.</td> <td>NO SEMINAR</td><td></td><td><a href="https://mat.fsv.cvut.cz/ops/2026.html">10th Ostrava–Prague Seminar on Topology & Dynamics</a></td> </tr>
+        <tr>
+          <td>4. 12.</td>
+          <td><a href="https://sites.google.com/view/matt-bowen/home">Matt Bowen</a></td>
+          <td>Warwick University</td>
+          <td>
+            TBA
+            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+          </td>
+        </tr>
 
-<tr> <td>18. 12.</td> <td>NO SEMINAR</td> <td></td> <td> 
+        <tr>
+          <td>11. 12.</td>
+          <td>NO SEMINAR</td>
+          <td></td>
+          <td><a href="https://mat.fsv.cvut.cz/ops/2026.html">10th Ostrava–Prague Seminar on Topology &amp; Dynamics</a></td>
+        </tr>
 
-<tr> <td>8. 1.</td> <td>Michal Hevessy</td> <td>Charles University</td> <td> TBA <details> <summary>Abstract</summary> <p>TBA</p> </details> </td> </tr>
+        <tr>
+          <td>18. 12.</td>
+          <td>NO SEMINAR</td>
+          <td></td>
+          <td></td>
+        </tr>
 
-  </table>
+        <tr>
+          <td>8. 1.</td>
+          <td>Michal Hevessy</td>
+          <td>Charles University</td>
+          <td>
+            TBA
+            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<p>
-The seminar is supported by <a href="https://grebikj.github.io/LoGloS.html">LoGloS</a>.</p>
-</p>
-
+  <p>The seminar is supported by <a href="https://grebikj.github.io/LoGloS.html">LoGloS</a>.</p>
 </body>
 </html>
-
-
-
-
