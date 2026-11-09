@@ -16,6 +16,10 @@
       text-decoration: underline;
     }
 
+    h2 {
+      margin-top: 2em;
+    }
+
     .table-wrapper {
       max-width: 1100px;
       overflow-x: auto;
@@ -50,24 +54,67 @@
       line-height: 1.5;
       text-align: left;
     }
+
+    /* Highlighted box for the current talk */
+    .current-talk {
+      max-width: 900px;
+      margin: 2em 0;
+      padding: 16px 20px;
+      border: 2px solid #777;
+      background: #f7f7f7;
+    }
+
+    .current-talk h2 {
+      margin-top: 0;
+      margin-bottom: 0.8em;
+    }
+
+    .current-talk p {
+      margin: 0.5em 0;
+    }
+
+    /* Clickable abstract */
+    details.abstract-details {
+      margin-top: 0.8em;
+      max-width: 65ch;
+    }
+
+    details.abstract-details summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Past talks */
+    .past-talks {
+      max-width: 1100px;
+      margin-top: 3em;
+    }
+
+    .past-talks > summary {
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
   </style>
 
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
-    }
-  };
-</script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
 
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
 </head>
 
 <body>
+
   <h1><strong>DeDyRa</strong> (Definability, Dynamics and Randomness) seminar</h1>
 
   <p><strong>Organizers:
@@ -77,8 +124,71 @@
 
   <p><strong>Fridays from 11:00 to 12:00 in room S8 at Malá Strana</strong></p>
 
-  <div class="table-wrapper" role="region" aria-label="Seminar schedule" tabindex="0">
+
+  <!-- CURRENT TALK -->
+
+  <div class="current-talk">
+
+    <h2>Current talk</h2>
+
+    <p><strong>Friday, 13. 11., 11:00–12:00</strong></p>
+
+    <p>
+      <strong>
+        <a href="https://sites.google.com/view/franco-severo">Franco Severo</a>
+      </strong>
+      (Sorbonne Université)
+    </p>
+
+    <p>
+      <em><strong>Weighted isoperimetry implies percolation</strong></em>
+    </p>
+
+    <details class="abstract-details">
+      <summary>Abstract</summary>
+
+      <p class="abstract">
+        Given a graph with edge weights $(\lambda_e)$, one can define the
+        associated isoperimetric profile $\phi(n)$ as the infimum over the
+        total weight of the edge boundaries of vertex subsets of size at
+        least $n$. Our main result shows that if $\phi$ grows sufficiently
+        fast (in particular, as any power law), then percolation occurs when
+        each edge is open with probability
+        $p_e=1-e^{-\lambda_e}$. As applications of this result, we prove the
+        truncation conjecture of Sidoravicius, Surgailis and Vares for
+        non-summable long-range percolation on $\mathbb{Z}^d$, as well as a
+        conjecture of Easo and Hutchcroft on the percolation threshold of
+        transitive graphs with large degree.
+      </p>
+
+      <p class="abstract">
+        As I will explain in the talk, the homogeneous case of this result
+        was recently obtained via a standard Peierls argument together with
+        a clever probabilistic method for counting cutsets, which has no
+        chance to work when weights can be arbitrarily small. Our main
+        contribution is to develop a new Peierls argument which takes into
+        account internal and external connectivity costs in addition to the
+        cost of the blocking surface.
+      </p>
+
+      <p class="abstract">
+        Based on joint work with Ivailo Hartarsky and Augusto Teixeira.
+      </p>
+
+    </details>
+
+  </div>
+
+
+  <!-- UPCOMING TALKS -->
+
+  <h2>Upcoming talks</h2>
+
+  <div class="table-wrapper" role="region"
+       aria-label="Upcoming seminar schedule" tabindex="0">
+
     <table>
+
       <colgroup>
         <col class="date-column">
         <col class="speaker-column">
@@ -96,57 +206,49 @@
       </thead>
 
       <tbody>
-        <tr>
-          <td>6. 11.</td>
-          <td><a href="https://andreasthom.github.io/">Andreas Thom</a></td>
-          <td>TU Dresden</td>
-          <td>
-            <em><strong>Approximation properties of groups</strong></em>
-            <p class="abstract"><strong>Abstract:</strong> I want to report on the recent developments that led to the construction of a non-sofic group. This is based on results of OpenAI and joint work with Gabor Kun.</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>13. 11.</td>
-          <td><a href="https://sites.google.com/view/franco-severo">Franco Severo</a></td>
-          <td>Sorbonne Université</td>
-          <td>
-            <em><strong>Weighted isoperimetry implies percolation</strong></em>
-            <p class="abstract"><strong>Abstract:</strong> Given a graph with edge weights $(\lambda_e)$, one can define the associated isoperimetric profile $\phi(n)$ as the infimum over the total weight of the edge boundaries of vertex subsets of size at least $n$. Our main result shows that if $\phi$ grows sufficiently fast (in particular, as any power law), then percolation occurs when each edge is open with probability $p_e=1-e^{-\lambda_e}$. As applications of this result, we prove the truncation conjecture of Sidoravicius, Surgailis and Vares for non-summable long-range percolation on $Z^d$, as well as a conjecture of Easo and Hutchcroft on the percolation threshold of transitive graphs with large degree.</p>
-
-<p class="abstract">As I will explain in the talk, the homogeneous case of this result was recently obtained via a standard Peierls argument together with a clever probabilistic method for counting cutsets, which has no chance to work when weights can be arbitrarily small. Our main contribution is to develop a new Peierls argument which takes into account internal and external connectivity costs in addition to the cost of the blocking surface.</p>
-
-<p class="abstract">Based on joint work with Ivailo Hartarsky and Augusto Teixeira.</p>
-          </td>
-        </tr>
 
         <tr>
           <td>20. 11.</td>
-          <td><a href="https://www.matthiasirlbeck.com/">Matthias Irlbeck</a></td>
+          <td>
+            <a href="https://www.matthiasirlbeck.com/">Matthias Irlbeck</a>
+          </td>
           <td>University of Hamburg</td>
           <td>
             TBA
-            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+            <details class="abstract-details">
+              <summary>Abstract</summary>
+              <p class="abstract">TBA</p>
+            </details>
           </td>
         </tr>
 
         <tr>
           <td>27. 11.</td>
-          <td><a href="https://sites.google.com/view/razslutskymath/">Raz Slutsky</a></td>
+          <td>
+            <a href="https://sites.google.com/view/razslutskymath/">Raz Slutsky</a>
+          </td>
           <td>University of Oxford</td>
           <td>
             TBA
-            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+            <details class="abstract-details">
+              <summary>Abstract</summary>
+              <p class="abstract">TBA</p>
+            </details>
           </td>
         </tr>
 
         <tr>
           <td>4. 12.</td>
-          <td><a href="https://sites.google.com/view/matt-bowen/home">Matt Bowen</a></td>
+          <td>
+            <a href="https://sites.google.com/view/matt-bowen/home">Matt Bowen</a>
+          </td>
           <td>Warwick University</td>
           <td>
             TBA
-            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+            <details class="abstract-details">
+              <summary>Abstract</summary>
+              <p class="abstract">TBA</p>
+            </details>
           </td>
         </tr>
 
@@ -154,7 +256,11 @@
           <td>11. 12.</td>
           <td>NO SEMINAR</td>
           <td></td>
-          <td><a href="https://mat.fsv.cvut.cz/ops/2026.html">10th Ostrava–Prague Seminar on Topology &amp; Dynamics</a></td>
+          <td>
+            <a href="https://mat.fsv.cvut.cz/ops/2026.html">
+              10th Ostrava–Prague Seminar on Topology &amp; Dynamics
+            </a>
+          </td>
         </tr>
 
         <tr>
@@ -170,13 +276,84 @@
           <td>Charles University</td>
           <td>
             TBA
-            <p class="abstract"><strong>Abstract:</strong> TBA</p>
+            <details class="abstract-details">
+              <summary>Abstract</summary>
+              <p class="abstract">TBA</p>
+            </details>
           </td>
         </tr>
+
       </tbody>
+
     </table>
   </div>
 
-  <p>The seminar is supported by <a href="https://grebikj.github.io/LoGloS.html">LoGloS</a>.</p>
+
+  <!-- PAST TALKS -->
+
+  <details class="past-talks">
+
+    <summary>Past talks</summary>
+
+    <div class="table-wrapper" role="region"
+         aria-label="Past seminar talks" tabindex="0">
+
+      <table>
+
+        <colgroup>
+          <col class="date-column">
+          <col class="speaker-column">
+          <col class="affiliation-column">
+          <col class="title-column">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Speaker</th>
+            <th scope="col">Affiliation</th>
+            <th scope="col">Title</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>6. 11.</td>
+            <td>
+              <a href="https://andreasthom.github.io/">Andreas Thom</a>
+            </td>
+            <td>TU Dresden</td>
+            <td>
+              <em><strong>Approximation properties of groups</strong></em>
+
+              <details class="abstract-details">
+                <summary>Abstract</summary>
+
+                <p class="abstract">
+                  I want to report on the recent developments that led to
+                  the construction of a non-sofic group. This is based on
+                  results of OpenAI and joint work with Gabor Kun.
+                </p>
+
+              </details>
+
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </details>
+
+
+  <p style="margin-top: 3em;">
+    The seminar is supported by
+    <a href="https://grebikj.github.io/LoGloS.html">LoGloS</a>.
+  </p>
+
 </body>
 </html>
