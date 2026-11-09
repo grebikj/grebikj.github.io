@@ -62,6 +62,7 @@
       padding: 16px 20px;
       border: 2px solid #777;
       background: #f7f7f7;
+      box-sizing: border-box;
     }
 
     .current-talk h2 {
@@ -73,7 +74,15 @@
       margin: 0.5em 0;
     }
 
-    /* Clickable abstract */
+    /* Let the current abstract use the full width of the box */
+    .current-talk .abstract {
+      max-width: none;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 1.5;
+    }
+
+    /* Clickable abstracts for upcoming and past talks */
     details.abstract-details {
       margin-top: 0.8em;
       max-width: 65ch;
@@ -144,38 +153,34 @@
       <em><strong>Weighted isoperimetry implies percolation</strong></em>
     </p>
 
-    <details class="abstract-details">
-      <summary>Abstract</summary>
+    <p class="abstract">
+      <strong>Abstract:</strong>
+      Given a graph with edge weights $(\lambda_e)$, one can define the
+      associated isoperimetric profile $\phi(n)$ as the infimum over the
+      total weight of the edge boundaries of vertex subsets of size at
+      least $n$. Our main result shows that if $\phi$ grows sufficiently
+      fast (in particular, as any power law), then percolation occurs when
+      each edge is open with probability
+      $p_e=1-e^{-\lambda_e}$. As applications of this result, we prove the
+      truncation conjecture of Sidoravicius, Surgailis and Vares for
+      non-summable long-range percolation on $\mathbb{Z}^d$, as well as a
+      conjecture of Easo and Hutchcroft on the percolation threshold of
+      transitive graphs with large degree.
+    </p>
 
-      <p class="abstract">
-        Given a graph with edge weights $(\lambda_e)$, one can define the
-        associated isoperimetric profile $\phi(n)$ as the infimum over the
-        total weight of the edge boundaries of vertex subsets of size at
-        least $n$. Our main result shows that if $\phi$ grows sufficiently
-        fast (in particular, as any power law), then percolation occurs when
-        each edge is open with probability
-        $p_e=1-e^{-\lambda_e}$. As applications of this result, we prove the
-        truncation conjecture of Sidoravicius, Surgailis and Vares for
-        non-summable long-range percolation on $\mathbb{Z}^d$, as well as a
-        conjecture of Easo and Hutchcroft on the percolation threshold of
-        transitive graphs with large degree.
-      </p>
+    <p class="abstract">
+      As I will explain in the talk, the homogeneous case of this result
+      was recently obtained via a standard Peierls argument together with
+      a clever probabilistic method for counting cutsets, which has no
+      chance to work when weights can be arbitrarily small. Our main
+      contribution is to develop a new Peierls argument which takes into
+      account internal and external connectivity costs in addition to the
+      cost of the blocking surface.
+    </p>
 
-      <p class="abstract">
-        As I will explain in the talk, the homogeneous case of this result
-        was recently obtained via a standard Peierls argument together with
-        a clever probabilistic method for counting cutsets, which has no
-        chance to work when weights can be arbitrarily small. Our main
-        contribution is to develop a new Peierls argument which takes into
-        account internal and external connectivity costs in addition to the
-        cost of the blocking surface.
-      </p>
-
-      <p class="abstract">
-        Based on joint work with Ivailo Hartarsky and Augusto Teixeira.
-      </p>
-
-    </details>
+    <p class="abstract">
+      Based on joint work with Ivailo Hartarsky and Augusto Teixeira.
+    </p>
 
   </div>
 
@@ -357,3 +362,4 @@
 
 </body>
 </html>
+```
